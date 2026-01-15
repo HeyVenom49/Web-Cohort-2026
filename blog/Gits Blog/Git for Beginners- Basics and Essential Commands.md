@@ -18,6 +18,6 @@ Remote: The shared online copy of the project
 
 With a small set of commands like git add, git commit, git pull, and git push, Git provides control, safety, and clarity, making it an essential tool in modern software development.
 
-For in details check this link
+For in details check this link 👇
 
 [For more details](https://heyvenom-git-for-beginner.hashnode.dev/git-for-beginners-basics-and-essential-commands)
