@@ -20,4 +20,4 @@ With a small set of commands like git add, git commit, git pull, and git push, G
 
 For in details check this link
 
-[text](https://heyvenom-git-for-beginner.hashnode.dev/git-for-beginners-basics-and-essential-commands)
+[For more details](https://heyvenom-git-for-beginner.hashnode.dev/git-for-beginners-basics-and-essential-commands)
