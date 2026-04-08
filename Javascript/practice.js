@@ -84,3 +84,48 @@
 // console.log("2");
 // setTimeout(() => console.log("3"), 0);
 // console.log("5");
+
+// function multipleBy5(num) {
+//   return num * 5;
+// }
+
+// multipleBy5.power = 2;
+
+// console.log(multipleBy5(5));
+// console.log(multipleBy5.power);
+// console.log(multipleBy5.prototype);
+
+// function createUser(username, score) {
+//   this.username = username;
+//   this.score = score;
+// }
+
+// createUser.prototype.increament = function () {
+//   this.score += 10; //! yaha pe hum this se ye bata rahe hai ki jo bhi call karega uska score ko hi increase karna hai
+// };
+
+// const chai = createUser("demo1", 20);
+// const coffee = createUser("demo2", 30);
+
+// console.log(`Chai price : ${chai.score} & Coffee price : ${coffee.score}`);
+
+// chai.increament();
+// coffee.increament();
+
+// console.log(
+//   `Chai price after increase : ${chai.score} & Coffee price after increase : ${coffee.score}`,
+// );
+
+// function setUsername(username) {
+//   this.username = username;
+// }
+
+// function createUser(username, email, password) {
+//   //! to yaha pe hum call use kar rahe kyuki setUsername already execute hoke ja chuka hai aur username set karke username bhi ja chuka hai but createUser me username to set nahi hua to isliye call ke saath hum this send kar rahe jo setUsername ko batayega bhai mujhe ye username chahiye set karke
+//   setUsername.call(this, username);
+//   this.email = email;
+//   this.password = password;
+// }
+
+// const chai = new createUser("demo", "demo@demo.com", "pass123");
+// console.log(chai);
