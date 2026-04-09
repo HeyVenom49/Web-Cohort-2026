@@ -172,19 +172,19 @@
 
 //? Inheritance
 
-class Animal {
-  speak() {
-    console.log("Animal makes sound");
-  }
-}
+// class Animal {
+//   speak() {
+//     console.log("Animal makes sound");
+//   }
+// }
 
-class Dog extends Animal {
-  speak() {
-    console.log("Dog barks");
-  }
-}
+// class Dog extends Animal {
+//   speak() {
+//     console.log("Dog barks");
+//   }
+// }
 
-const animal = new Dog();
+// const animal = new Dog();
 
 // console.log(
 //   `Is Dog is instance of Animal ${animal instanceof Animal ? "YES" : "NO"}`,
@@ -237,8 +237,6 @@ const animal = new Dog();
 // const user = new User("demo", "demo@demo.com", "password");
 // user.logMe();
 // console.log(user.createId());
-
-//? setter and getter
 
 //? getter and setter
 
@@ -318,3 +316,17 @@ const animal = new Dog();
 // const tea = Object.create(User);
 // tea.email = "demo1@demo.com";
 // console.log(tea.email);
+
+function outer() {
+  let a = 0;
+
+  function inner() {
+    return a++;
+  }
+  return inner;
+}
+
+const num = outer();
+console.log(num());
+console.log(num());
+console.log(num());
