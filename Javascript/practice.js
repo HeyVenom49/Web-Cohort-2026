@@ -129,3 +129,111 @@
 
 // const chai = new createUser("demo", "demo@demo.com", "pass123");
 // console.log(chai);
+
+// class User {
+//   constructor(username, email, password) {
+//     this.username = username;
+//     this.email = email;
+//     this.password = password;
+//   }
+
+//   encryptPassword() {
+//     return `${this.password}abc`;
+//   }
+
+//   changeUsername() {
+//     return `${this.username.toUpperCase()}`;
+//   }
+// }
+
+// const chai = new User("demo", "demo@demo.com", "demo");
+// // console.log(chai.encryptPassword());
+// console.log(chai.changeUsername());
+
+//! same thing but old way
+
+// function User(username, email, password) {
+//   this.username = username;
+//   this.email = email;
+//   this.password = password;
+// }
+
+// User.prototype.encryptPassword = function () {
+//   return `${this.password}jweoefjo`;
+// };
+
+// User.prototype.changeUsername = function () {
+//   return `${this.username.toUpperCase()}`;
+// };
+
+// const tea = new User("demo", "demo@demo.com", "demo123");
+// console.log(tea.encryptPassword());
+// console.log(tea.changeUsername());
+
+//? Inheritance
+
+class Animal {
+  speak() {
+    console.log("Animal makes sound");
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log("Dog barks");
+  }
+}
+
+const animal = new Dog();
+
+// console.log(
+//   `Is Dog is instance of Animal ${animal instanceof Animal ? "YES" : "NO"}`,
+// );
+
+// animal.speak();
+
+// class User {
+//   constructor(username) {
+//     this.username = username;
+//   }
+
+//   logMe() {
+//     console.log(`USERNAME is ${this.username}`);
+//   }
+// }
+
+// class Teacher extends User {
+//   constructor(username, email, password) {
+//     super(username);
+//     this.email = email;
+//     this.password = password;
+//   }
+
+//   addCourse() {
+//     console.log(`A new course was added by ${this.username}`);
+//   }
+// }
+
+// const chai = new Teacher("demo", "demo@demo.com", "password");
+// chai.addCourse();
+
+//? Static
+
+// class User {
+//   constructor(username) {
+//     this.username = username;
+//   }
+
+//   logMe() {
+//     console.log(`Username is ${this.username}`);
+//   }
+
+//   //! static karne se ye method kabhi access nahi kar sakte, ye inherit ho jayega but access waha bhi nahi kar sakte
+//   static createId() {
+//     return Number(`${Math.floor(Math.random() * 100000 + 1)}`);
+//   }
+// }
+
+// const user = new User("demo", "demo@demo.com", "password");
+// user.logMe();
+// console.log(user.createId());
