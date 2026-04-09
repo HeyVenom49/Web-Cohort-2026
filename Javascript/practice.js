@@ -237,3 +237,84 @@ const animal = new Dog();
 // const user = new User("demo", "demo@demo.com", "password");
 // user.logMe();
 // console.log(user.createId());
+
+//? setter and getter
+
+//? getter and setter
+
+// class User {
+//   constructor(email, password) {
+//     this.email = email;
+//     this.password = password;
+//   }
+
+//   get email() {
+//     return this._email.toUpperCase();
+//   }
+
+//   set email(email) {
+//     this._email = email;
+//   }
+
+//   get password() {
+//     return `${this._password}hitesh`;
+//   }
+
+//   set password(value) {
+//     this._password = value;
+//   }
+// }
+
+// const user = new User("demo@demo.com", "password");
+// for (let value in user) {
+//   console.log(value);
+// }
+
+// console.log(Object.getOwnPropertyDescriptor(User.prototype, "password"));
+
+//! another way to do the same thing
+
+// function User(email, password) {
+//   this._email = email;
+//   this._password = password;
+
+//   Object.defineProperty(this, "email", {
+//     get: function () {
+//       return this._email.toUpperCase();
+//     },
+//     set: function (value) {
+//       this._email = value;
+//     },
+//   });
+
+//   Object.defineProperty(this, "password", {
+//     get: function () {
+//       return this._password.toUpperCase();
+//     },
+//     set: function (value) {
+//       this._password = value;
+//     },
+//   });
+// }
+
+// const user = new User("demo@demo.com", "password");
+// console.log(user.email);
+// console.log(user.password);
+
+// const User = {
+//   _email: "demo@demo.com",
+//   _password: "password",
+
+//   get email() {
+//     return this._email.toUpperCase();
+//   },
+
+//   set email(value) {
+//     this._email = value;
+//   },
+// };
+// console.log(User.email);
+
+// const tea = Object.create(User);
+// tea.email = "demo1@demo.com";
+// console.log(tea.email);
