@@ -317,16 +317,25 @@
 // tea.email = "demo1@demo.com";
 // console.log(tea.email);
 
-function outer() {
-  let a = 0;
+// function outer() {
+//   let a = 0;
 
-  function inner() {
-    return a++;
-  }
-  return inner;
-}
+//   function inner() {
+//     return a++;
+//   }
+//   return inner;
+// }
 
-const num = outer();
-console.log(num());
-console.log(num());
-console.log(num());
+// const num = outer();
+// console.log(num());
+// console.log(num());
+// console.log(num());
+
+// const arrowFunction = () => {
+//   console.log(arguments);
+// };
+
+// function arrowFunction() {
+//   console.log(arguments);
+// }
+// arrowFunction();
