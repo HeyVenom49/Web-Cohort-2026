@@ -58,6 +58,7 @@ if (!String.prototype.myToUpperCase) {
 //         else
 //             result += this[i];
 //     }
+//      return result;
 // }
 
 console.log("popui".myToUpperCase());
