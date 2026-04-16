@@ -44,3 +44,16 @@ const aadhaarOfYou = Symbol("aadhaar");
 // for (let query of rtiQueryBook) {
 //   console.log(`Filing RTI: ${query}`);
 // }
+
+const governmentScheme = {
+  name: "PM Kisan Yojna",
+  price: 54,
+
+  [Symbol.toPrimitive](hint) {
+    if (hint === "string") return this.name;
+    return this.price;
+  },
+};
+
+console.log(+governmentScheme);
+console.log(`${governmentScheme}`);
