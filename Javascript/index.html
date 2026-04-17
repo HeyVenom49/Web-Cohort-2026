@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    //add button
+    <button id="myButton">Click me</button>
+
+    <script>
+
+        /*
+        To humne padha tha ki jab bhi hum button.addEventListener se click karenge to wo function chalega. Lekin agar humne do baar addEventListener se click event add kar diya to dono function chalega. Iska matlab hai ki ek button par hum multiple event listeners add kar sakte hain aur jab bhi button click hoga to sabhi event listeners execute honge.
+
+        To ho kya raha hai
+
+        const button = {
+            clickListeners: [],
+            function addEventListener(event, listener) {
+                if (event === "click") {
+                    this.clickListeners.push(listener);
+                }
+            },
+            function click() {                
+                this.clickListeners.forEach(listener => listener());
+            }
+        };
+        */
+
+        let button = document.getElementById("myButton");
+        button.addEventListener("click", function () {
+            alert("Button was clicked!");
+        });
+        button.addEventListener("click", function () {
+            alert("Button was clicked!");
+        });
+    </script>
+</body>
+
+</html>

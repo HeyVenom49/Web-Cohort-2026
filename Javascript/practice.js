@@ -339,3 +339,15 @@
 //   console.log(arguments);
 // }
 // arrowFunction();
+
+// function eternal(guest) {
+//   const guestName = guest;
+//   function zomato() {
+//     console.log(`Hi ${guestName}`);
+//   }
+//   return zomato;
+// }
+
+// const hitesh = eternal("hitesh");
+
+// hitesh();
