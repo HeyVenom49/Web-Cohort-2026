@@ -25,6 +25,7 @@ function block_1_httpMethods() {
           `[Timer] --> ${req.method} - ${req.url} took ${duration} ms`,
         );
       });
+      next();
     });
 
     function authMe(req, res, next) {
@@ -50,7 +51,22 @@ function block_1_httpMethods() {
       };
     }
 
-    app.get("/profile", authMe, () => {});
+    function getRoles(roles) {
+      return (req, res, next) => {
+        if (!req.user || !roles.includes(req.user.role))
+          return res.status(403).json({ error: "Bhai tu exist hi nahi karta" });
+
+        next();
+      };
+    }
+
+    app.get("/profile", authMe, getRole("admin"), () => {});
+    app.get(
+      "/profile",
+      authMe,
+      getRoles(["admin", "student", "teacher"]),
+      () => {},
+    );
 
     const server = app.listen(0, async () => {
       const port = server.address().port;
