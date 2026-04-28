@@ -8,7 +8,7 @@ import LoginDto from "./dto/login.dto.js";
 const router = Router();
 
 router.post("/register", validate(RegisterDto), controller.register);
-router.get("/login", validate(LoginDto), controller.login);
+router.post("/login", validate(LoginDto), controller.login);
 router.get("/verify-email/:token", controller.verifyEmail);
 router.post("/logout", authenticate, controller.logout);
 
